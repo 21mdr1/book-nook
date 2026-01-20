@@ -1,0 +1,156 @@
+body {
+  background-color: #785e17;
+}
+
+* , *::before, *::after {
+  padding: 0;
+  margin: 0;
+  font-family: Verdana, Tahoma, Arial;
+  box-sizing: border-box;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+input {
+  border: 1px solid #c9bfa9;
+}
+
+input:active {
+  border: 1px solid #8f8678;
+}
+
+a {
+  decoration: none;
+  color: inherit;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+  padding: 1rem 2rem;
+}
+
+.nav__left {
+  color: #f2eee6;
+}
+
+.search-form {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.search-form__input {
+  background-color: #f2eee6;
+  border-radius: 15rem;
+  padding: 0.5rem 1rem;
+  width: 20rem;
+}
+.search-form__button {
+  border: none;
+  background-color: #544523;
+  color: white;
+  border-radius: 100px;
+  padding: 0.5rem 2rem;
+}
+
+.search-form__button:hover {
+  background-color: #403215;
+  cursor: pointer;
+}
+
+.content {
+  display: flex;
+  min-height: 100%;
+  padding: 0 1rem 1rem;
+}
+
+.main {
+  flex-grow: 1;
+  padding: 1rem;
+}
+
+.sidebar {
+  background-color: #ba8c0d;
+  border-radius: 0.75rem;
+  width: 15%;
+  padding-bottom: 1rem;
+}
+
+.side-group {
+  padding: 0.4rem;
+  border-bottom: 15px solid #917527;
+}
+
+.side-group__title {
+  margin-bottom: 0.2rem;
+  text-transform: uppercase;
+}
+
+.side-group__list {
+  margin-left: 0.3rem;
+}
+
+.side-group--user {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 0.75rem 2rem;
+}
+.side-group__user-pic {
+  width: 2.5rem;
+  aspect-ratio: 1 / 1;
+  border-radius: 100px;
+  background-color: #f2eee6;
+}
+
+.side-group--goal {
+
+}
+
+.side-group__title--center {
+  text-align: center;
+}
+
+.side-group__goal-progress {
+  width: 5rem;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 5px solid #f2eee6;
+  border-radius: 100px;
+  margin: 1rem auto;
+}
+
+.side-group__text--center {
+  text-align: center;
+}
+
+.results {
+
+}
+
+.book {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.book__pic {
+  width: 3rem;
+}
+
+.book__info {
+
+}
+
+.book__title {
+
+}
+
+.book__author {
+
+}
