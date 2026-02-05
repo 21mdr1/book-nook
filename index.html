@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
@@ -7,72 +6,81 @@
 
   <link rel="stylesheet" href="./style.css" />
 
-  <title> Book Nook </title>
+  <title> Book Nook - Feed </title>
 
   <script src="./script.js" defer></script>
 </head>
 <body>
-  <div class="nav">
-    <div class="nav__left">
-      <h2 class="nav__logo">Book Nook</h2>
-      <p class="nav__motto"> A place for book lovers </p>
-    </div>
-    <form class="search-form">
-      <input class="search-form__input" placeholder="Search Book" name="book" id="book"></input>
-      <button class="search-form__button"> Search</button>
-    </form>
+
+  <div class="menu">
+    <a class="menu__option menu__option--feed" href="#">
+      <img class="menu__icon menu__icon--feed" src="./icons/bookmark_dark.svg" />
+      <span class="menu__label menu__label--feed">Feed</span>
+    </a>
+    <a class="menu__option menu__option--shelves">
+      <img class="menu__icon menu__icon--shelves" src="./icons/shelf_light.svg" />
+      <span class="menu__label menu__label--shelves">Shelves</span>
+    </a>
+    <a class="menu__option menu__option--search">
+      <img class="menu__icon menu__icon--search" src="./icons/book_search_light.svg" />
+      <span class="menu__label menu__label--search">Search</span>
+    </a>
+    <a class="menu__option menu__option--threads">
+      <img class="menu__icon menu__icon--threads" src="./icons/speech_bubble_light.svg" />
+      <span class="menu__label menu__label--threads">Threads</span>
+    </a>
+    <a class="menu__option menu__option--profile">
+      <img class="menu__icon menu__icon--profile" src="./icons/reader_light.svg" />
+      <span class="menu__label menu__label--profile">Profile</span>
+    </a>
   </div>
 
-  <div class="content">
-    <div class="sidebar sidebar--left">
-      <div class="side-group side-group--shelves">
-        <h4 class="side-group__title">My Shelves</h4>
-        <ul class="side-group__list">
-          <li class="side-group__list-item">Read</li>
-          <li class="side-group__list-item">To Read</li>
-          <li class="side-group__list-item">Reading</li>
-          <li class="side-group__list-item">Abandoned</li>
-          <li class="side-group__list-item">Sci Fi</li>
-          <li class="side-group__list-item">Favorites</li>
-        </ul>
-      </div>
-      <div class="side-group side-group--groups">
-        <h4 class="side-group__title">My Groups</h4>
-        <ul class="side-group__list">
-          <li class="side-group__list-item">Sci Fi Group</li>
-          <li class="side-group__list-item">Friends</li>
-          <li class="side-group__list-item">Bible Study</li>
-        </ul>
-      </div>
-      <div class="side-group side-group--threads">
-        <h4 class="side-group__title">Threads</h4>
-        <ul class="side-group__list">
-          <li class="side-group__list-item">Mary Shelley...</li>
-          <li class="side-group__list-item">3 books I ...</li>
-          <li class="side-group__list-item">What's your ...</li>
-        </ul>
-      </div>
+  <main class="main">
+    <div class="nav">
+      <form class="search">
+        <input class="search__input" placeholder="Search Book" name="book" id="book"></input>
+        <button class="search__button">
+          <img class="search__button-icon" src="./icons/looking_glass.svg" />
+        </button>
+      </form>
+
+      <a>
+        <div class="avatar"></div>
+      </a>
     </div>
 
-    <main class="main">
-      <h1 class="title">Books</h1>
-      <div class="results"></div>
-    </main>
-
-    <div class="sidebar sidebar--right">
-      <div class="side-group side-group--user">
-        <div class="side-group__user-pic"></div>
-        <p class="side-group__user-name">Me</p>
-      </div>
-      <div class="side-group"></div>
-      <div class="side-group side-group__goal">
-        <h4 class="side-group__title side-group__title--center">2026 Goal</h4>
-        <div class="side-group__goal-progress">
-          100%
+    <div class="content">
+      <div class="feed-card feed-card--summary">
+        <div>
+          <div>
+            <h3>2026 Goal</h3>
+            <p>Read 50 books</p>
+          </div>
+          <div>68%</div>
         </div>
-        <p class="side-group__text side-group__text--center">10 pages</p>
+        <p>34 books read so far</p>
+      </div>
+      <div class="feed-card feed-card--review">
+        <p class="feed-card__user">bidetuser341 says...</p>
+        <div class="feed-card__info">
+          <div class="feed-card__book">
+            <img class="feed-card__image"/>
+            <h6 class="feed-card__title">The Sun Also Rises</h6>
+          </div>
+          <p class="feed-card__text">This has been my favorite book since highschool...</p>
+        </div>
+      </div>
+      <div class="feed-card feed-card--review">
+        <p class="feed-card__user">alphabear231 says...</p>
+        <div class="feed-card__info">
+          <div class="feed-card__book">
+            <img class="feed-card__image" />
+            <h6 class="feed-card__title">Farenheit 451</h6>
+          </div>
+          <p class="feed-card__text">The book left me wanting something more...</p>
+        </div>
       </div>
     </div>
-  </div>
+  </main>
 
 </body>
