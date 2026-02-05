@@ -1,5 +1,16 @@
+:root {
+  --primary-light: #8A6240;
+  --primary-dark: #4D2D18;
+  --background: #F9F0EA;
+  --main: #CABA9C;
+  --secondary-light: #4C6444;
+  --secondary-dark: #102820;
+  --border-radius: 15px;
+  --white: #FAFBFA;
+}
+
 body {
-  background-color: #785e17;
+  background-color: var(--background);
 }
 
 * , *::before, *::after {
@@ -13,144 +24,133 @@ ul, ol {
   list-style: none;
 }
 
-input {
-  border: 1px solid #c9bfa9;
-}
-
-input:active {
-  border: 1px solid #8f8678;
-}
-
 a {
-  decoration: none;
+  text-decoration: none;
   color: inherit;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+}
+
+.main {
+  background-color: var(--background);
+  min-height: calc(100vh - 55px);
+  margin-bottom: 55px;
+}
+
+.menu {
+  background-color: var(--background);
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  padding: 0.5rem 1rem;
+  justify-content: space-around;
+}
+
+.menu__option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.menu__label {
+  font-size: 0.6rem;
+  color: var(--primary-light);
+}
+
+.menu__label--feed {
+  color: var(--primary-dark);
 }
 
 .nav {
   display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 1rem;
+  width: 100%;
   align-items: center;
-  gap: 5rem;
-  padding: 1rem 2rem;
 }
 
-.nav__left {
-  color: #f2eee6;
+.search {
+  flex-grow: 1;
+  position: relative;
 }
 
-.search-form {
-  display: flex;
-  gap: 0.5rem;
-}
-
-.search-form__input {
-  background-color: #f2eee6;
-  border-radius: 15rem;
-  padding: 0.5rem 1rem;
-  width: 20rem;
-}
-.search-form__button {
-  border: none;
-  background-color: #544523;
-  color: white;
+.search__input {
+  background-color: var(--white);
   border-radius: 100px;
-  padding: 0.5rem 2rem;
+  border: 1px solid var(--primary-light);
+  padding: 0.5rem 1.25rem;
+  width: 100%;
 }
 
-.search-form__button:hover {
-  background-color: #403215;
-  cursor: pointer;
+.search__input:placeholder {
+  color: var(--main);
+  font-size: 0.85rem;
+}
+
+.search__button {
+  position: absolute;
+  right: 1.25rem;
+  margin: 0.65rem 0;
+}
+
+.avatar {
+  background-color: var(--main);
+  width: 50px;
+  aspect-ratio: 1;
+  border-radius: 100px;
 }
 
 .content {
-  display: flex;
-  min-height: 100%;
-  padding: 0 1rem 1rem;
+  padding: 0 1rem;
 }
 
-.main {
-  flex-grow: 1;
+.feed-card {
   padding: 1rem;
+  border-radius: var(--border-radius);
+  margin-bottom: 1rem;
 }
 
-.sidebar {
-  background-color: #ba8c0d;
-  border-radius: 0.75rem;
-  width: 15%;
-  padding-bottom: 1rem;
+.feed-card--summary {
+  background-color: var(--main);
 }
 
-.side-group {
-  padding: 0.4rem;
-  border-bottom: 15px solid #917527;
+.feed-card--review {
+  background-color: var(--white);
 }
 
-.side-group__title {
-  margin-bottom: 0.2rem;
-  text-transform: uppercase;
+.feed-card__user {
+  font-size: 0.75rem;
+  color: var(--secondary-dark);
+  margin-bottom: 1rem;
 }
 
-.side-group__list {
-  margin-left: 0.3rem;
-}
-
-.side-group--user {
+.feed-card__info {
   display: flex;
-  align-items: center;
   gap: 1.5rem;
-  padding: 0.75rem 2rem;
-}
-.side-group__user-pic {
-  width: 2.5rem;
-  aspect-ratio: 1 / 1;
-  border-radius: 100px;
-  background-color: #f2eee6;
 }
 
-.side-group--goal {
-
+.feed-card__book {
 }
 
-.side-group__title--center {
-  text-align: center;
+.feed-card__image {
+  height: 5.5rem;
+  min-width: 4rem;
+  background-color: var(--main);
+  margin-bottom: 0.5rem;
 }
 
-.side-group__goal-progress {
-  width: 5rem;
-  aspect-ratio: 1 / 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 5px solid #f2eee6;
-  border-radius: 100px;
-  margin: 1rem auto;
+.feed-card__title {
+  font-size: 0.5rem;
+  color: var(--secondary-dark);
 }
 
-.side-group__text--center {
-  text-align: center;
-}
-
-.results {
-
-}
-
-.book {
-  display: flex;
-  gap: 1rem;
-  padding: 1rem;
-}
-
-.book__pic {
-  width: 3rem;
-}
-
-.book__info {
-
-}
-
-.book__title {
-
-}
-
-.book__author {
-
+.feed-card__text {
+  font-size: 0.75rem;
+  color: var(--primary-dark);
 }
