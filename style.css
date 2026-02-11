@@ -198,7 +198,6 @@ button {
   justify-content: center;
   align-items: center;
   border-radius: 100px;
-  /* background: conic-gradient(var(--secondary-light) calc( 68 * 3.6deg ), var(--main) 0deg); */
   background: conic-gradient(var(--secondary-light) var(--angle), var(--main) 0deg);
   animation: angle-change ease-in-out 1s 1 forwards;
   
