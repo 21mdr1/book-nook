@@ -107,7 +107,7 @@ button {
 }
 
 .content {
-  padding: 0 1rem;
+  padding: 0 2rem;
 }
 
 .feed-card {
@@ -135,7 +135,13 @@ button {
   gap: 1.5rem;
 }
 
+.feed-card__info--summary {
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+}
+
 .feed-card__book {
+
 }
 
 .feed-card__image {
@@ -147,10 +153,71 @@ button {
 
 .feed-card__title {
   font-size: 0.5rem;
+  font-weight: 400; 
+  text-align: center;
   color: var(--secondary-dark);
 }
 
 .feed-card__text {
   font-size: 0.75rem;
   color: var(--primary-dark);
+}
+
+.feed-card__heading {
+  font-size: 1.13rem;
+  font-weight: 600;
+  color: var(--secondary-dark);
+  margin-bottom: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.feed-card__data {
+  font-size: 0.75rem;
+  color: var(--primary-dark);
+}
+
+@property --angle {
+  syntax: '<angle>';
+  inherits: false;
+  initial-value: 0deg;
+}
+
+@keyframes angle-change {
+  from {
+    --angle:0deg;
+  }
+  to {
+    --angle:calc( 68 * 3.6deg );
+  }
+}
+
+.graphic__outer-circle {
+  width: 6.25rem;
+  aspect-ratio: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+  /* background: conic-gradient(var(--secondary-light) calc( 68 * 3.6deg ), var(--main) 0deg); */
+  background: conic-gradient(var(--secondary-light) var(--angle), var(--main) 0deg);
+  animation: angle-change ease-in-out 1s 1 forwards;
+  
+}
+
+.graphic__inner-circle {
+  width: calc(6.25rem - 1.25rem);
+  aspect-ratio: 1;
+  border-radius: 100px;
+  background-color: var(--main);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.graphic__percentage {
+  color: var(--secondary-dark);
+}
+
+.feed-card__text--center {
+  text-align: center;
 }
