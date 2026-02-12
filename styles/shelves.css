@@ -1,111 +1,36 @@
-:root {
-  --primary-light: #8A6240;
-  --primary-dark: #4D2D18;
-  --background: #F9F0EA;
-  --main: #CABA9C;
-  --secondary-light: #4C6444;
-  --secondary-dark: #102820;
-  --border-radius: 15px;
-  --white: #FAFBFA;
+.header-dropdown {
+  background-color: var(--main);
+  border-radius: var(--border-radius);
+  padding: 1rem 2rem;
+
+  font-size: 1.25rem;
+  color: var(--primary-dark);
+
+  margin-bottom: 1rem;
 }
 
-body {
-  background-color: var(--background);
-}
-
-* , *::before, *::after {
-  padding: 0;
-  margin: 0;
-  font-family: Verdana, Tahoma, Arial;
-  box-sizing: border-box;
-}
-
-ul, ol {
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-button {
-  border: none;
-  background-color: transparent;
-}
-
-.main {
-  background-color: var(--background);
-  min-height: calc(100vh - 55px);
-  margin-bottom: 55px;
-}
-
-.menu {
-  background-color: var(--background);
+.books-container {
   display: flex;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100vw;
-  padding: 0.5rem 1rem;
-  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 1.5rem 2rem;
 }
 
-.menu__option {
+.book {
+  width: calc((100% - 4rem) / 3);
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 0.5rem;
 }
 
-.menu__label {
-  font-size: 0.6rem;
-  color: var(--primary-light);
+.book__cover {
+  background-color: #d9d9d9;
+  width: 64px;
+  height: 84px;
 }
 
-.menu__label--feed {
-  color: var(--primary-dark);
-}
-
-.nav {
-  display: flex;
-  justify-content: space-between;
-  gap: 2rem;
-  padding: 1rem;
-  width: 100%;
-  align-items: center;
-}
-
-.search {
-  flex-grow: 1;
-  position: relative;
-}
-
-.search__input {
-  background-color: var(--white);
-  border-radius: 100px;
-  border: 1px solid var(--primary-light);
-  padding: 0.5rem 1.25rem;
-  width: 100%;
-}
-
-.search__input:placeholder {
-  color: var(--main);
-  font-size: 0.85rem;
-}
-
-.search__button {
-  position: absolute;
-  right: 1.25rem;
-  margin: 0.65rem 0;
-}
-
-.avatar {
-  background-color: var(--main);
-  width: 50px;
-  aspect-ratio: 1;
-  border-radius: 100px;
-}
-
-.content {
-  padding: 0 2rem;
+.book__title {
+  color: var(--secondary-dark);
+  font-size: 0.5rem;
+  text-align: center;
 }
