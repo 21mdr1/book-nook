@@ -1,12 +1,6 @@
-.header-dropdown {
-  background-color: var(--main);
-  border-radius: var(--border-radius);
-  padding: 1rem 2rem;
-
-  font-size: 1.25rem;
-  color: var(--primary-dark);
-
-  margin-bottom: 1rem;
+.header {
+  font-size: 0.875rem;
+  margin: 0 -1rem 1rem;
 }
 
 .books-container {

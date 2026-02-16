@@ -5,8 +5,21 @@
   --main: #CABA9C;
   --secondary-light: #4C6444;
   --secondary-dark: #102820;
-  --border-radius: 15px;
   --white: #FAFBFA;
+
+  --border-radius: 1rem;
+
+  --label: 0.5rem;
+  --text: 0.75rem;
+  --heading: 1.13rem;
+}
+
+@media (min-width: 720px) {
+  :root {
+    --label: 0.75rem;
+    --text: 1rem;
+    --heading: 1.25rem;
+  }
 }
 
 body {
@@ -36,8 +49,13 @@ button {
 
 .main {
   background-color: var(--background);
-  min-height: calc(100vh - 55px);
   margin-bottom: 55px;
+}
+
+@media (min-width: 720px) {
+  .main {
+    margin-bottom: 64.59px
+  }
 }
 
 .menu {
@@ -55,14 +73,25 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 0.1rem;
+}
+
+.menu__icon {
+  height: 1.63rem;
+}
+
+@media (min-width: 720px) {
+  .menu__icon {
+    height: 2rem;
+  }
 }
 
 .menu__label {
-  font-size: 0.6rem;
+  font-size: var(--label);
   color: var(--primary-light);
 }
 
-.menu__label--feed {
+.menu__label--dark {
   color: var(--primary-dark);
 }
 
@@ -73,6 +102,14 @@ button {
   padding: 1rem;
   width: 100%;
   align-items: center;
+}
+
+@media (min-width: 720px) {
+  .nav {
+    position: relative;
+    height: 9rem;
+    padding: 2rem;
+  }
 }
 
 .search {
@@ -90,22 +127,56 @@ button {
 
 .search__input:placeholder {
   color: var(--main);
-  font-size: 0.85rem;
+  font-size: var(text);
 }
 
 .search__button {
   position: absolute;
+  height: 1rem;
   right: 1.25rem;
   margin: 0.65rem 0;
 }
 
+@media (min-width: 720px) {
+  .search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .search__input {
+    padding: 0.75rem 1.5rem;
+    width: 20rem;
+  }
+
+  .search__button {
+    right: calc(50% - 10rem + 1.25rem);
+    height: 1.5rem;
+  }
+}
+
 .avatar {
   background-color: var(--main);
-  width: 50px;
+  width: 3.12rem;
   aspect-ratio: 1;
   border-radius: 100px;
 }
 
+@media (min-width: 720px) {
+  .avatar {
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 2rem;
+    width: 5rem;
+  }
+}
+
 .content {
   padding: 0 2rem 0.5rem;
+}
+
+@media (min-width: 720px) {
+  .content {
+    padding: 0 4rem 0.5rem;
+  }
 }
