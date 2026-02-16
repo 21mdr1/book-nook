@@ -9,43 +9,43 @@
 
   <title> Book Nook - Feed </title>
 
-  <script src="./script.js" defer></script>
+  <!-- <script src="./script.js" defer></script> -->
 </head>
 <body>
 
   <div class="menu">
-    <a class="menu__option menu__option--feed" href="#">
-      <img class="menu__icon menu__icon--feed" src="./icons/bookmark_dark.svg" />
-      <span class="menu__label menu__label--feed">Feed</span>
+    <a class="menu__option" href="#">
+      <img class="menu__icon" src="./icons/bookmark_dark.svg" />
+      <span class="menu__label menu__label--dark">Feed</span>
     </a>
-    <a class="menu__option menu__option--shelves" href="./pages/shelves.html">
-      <img class="menu__icon menu__icon--shelves" src="./icons/shelf_light.svg" />
-      <span class="menu__label menu__label--shelves">Shelves</span>
+    <a class="menu__option" href="./pages/shelves.html">
+      <img class="menu__icon" src="./icons/shelf_light.svg" />
+      <span class="menu__label">Shelves</span>
     </a>
-    <a class="menu__option menu__option--search">
-      <img class="menu__icon menu__icon--search" src="./icons/book_search_light.svg" />
-      <span class="menu__label menu__label--search">Search</span>
+    <a class="menu__option" href="./pages/search.html">
+      <img class="menu__icon" src="./icons/book_search_light.svg" />
+      <span class="menu__label">Search</span>
     </a>
-    <a class="menu__option menu__option--threads">
-      <img class="menu__icon menu__icon--threads" src="./icons/speech_bubble_light.svg" />
-      <span class="menu__label menu__label--threads">Threads</span>
+    <a class="menu__option" href="./pages/threads.html">
+      <img class="menu__icon" src="./icons/speech_bubble_light.svg" />
+      <span class="menu__label">Threads</span>
     </a>
-    <a class="menu__option menu__option--profile">
-      <img class="menu__icon menu__icon--profile" src="./icons/reader_light.svg" />
-      <span class="menu__label menu__label--profile">Profile</span>
+    <a class="menu__option" href="./pages/profile.html">
+      <img class="menu__icon" src="./icons/reader_light.svg" />
+      <span class="menu__label">Profile</span>
     </a>
   </div>
 
   <main class="main">
     <div class="nav">
       <form class="search">
-        <input class="search__input" placeholder="Search Book" name="book" id="book"></input>
-        <button class="search__button">
-          <img class="search__button-icon" src="./icons/looking_glass.svg" />
-        </button>
+        <input class="search__input" placeholder="Search Book" name="book" id="book" />
+          <button class="search__button">
+            <img class="search__button-icon" src="./icons/looking_glass.svg" />
+          </button>
       </form>
 
-      <a>
+      <a href="./pages/profile.html">
         <div class="avatar"></div>
       </a>
     </div>
